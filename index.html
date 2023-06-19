@@ -4,7 +4,12 @@
   <title>HuGOAT Riddle</title>
   <style>
     body {
-      background: linear-gradient(0deg, #000000 0%, #363636 50%, #000000 100%);
+      background-color: black;
+      background-image:
+        linear-gradient(#363636 50px, transparent 50px),
+        linear-gradient(90deg, #363636 50px, transparent 50px);
+      background-size: 500px 500px;
+      background-position: center center;
       height: 100vh;
       margin: 0;
       padding: 0;
@@ -12,15 +17,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      animation: gradientAnimation 10s ease-in-out infinite;
     }
-    
-    @keyframes gradientAnimation {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    
     h1 {
       color: white;
       font-family: "Arial", sans-serif;
@@ -28,7 +25,6 @@
       text-align: center;
       margin-bottom: 20px;
     }
-    
     button {
       display: block;
       margin: 0 auto;
@@ -38,8 +34,8 @@
 <body>
   <h1>HuGOAT Riddle</h1>
   <button onclick="startGame()">Iniciar</button>
-  
 
+  
   <script>
     function startGame() {
       window.location.href = "fase1.html";
@@ -47,6 +43,4 @@
   </script>
 </body>
 </html>
-
-
 
