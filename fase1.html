@@ -47,7 +47,21 @@
     <div class="image-container">
       <img src="https://i.imgur.com/QrmDkqN.jpeg" alt="Dica do jogo">
     </div>
-    <input class="answer-input" type="text" placeholder="Digite sua resposta">
+    <input class="answer-input" type="text" placeholder="Digite sua resposta" onkeypress="checkEnter(event)">
   </div>
+
+  <script>
+    function checkEnter(event) {
+      if (event.keyCode === 13) {
+        var answer = document.querySelector('.answer-input').value.toLowerCase();
+        
+        if (answer === 'resposta_correta') {
+          window.location.href = 'proxima_fase.html';
+        } else {
+          window.location.href = 'pagina_de_erro.html';
+        }
+      }
+    }
+  </script>
 </body>
 </html>
