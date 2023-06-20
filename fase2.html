@@ -45,7 +45,7 @@
 <body>
   <div class="center-container">
     <div class="image-container">
-      <img src="https://i.imgur.com/QrmDkqN.jpeg" alt="Dica do jogo">
+      <img src="https://i.imgur.com/BS9tIRS.mp4" alt="Dica do jogo">
     </div>
     <input class="answer-input" type="text" placeholder="Digite sua resposta" onkeypress="checkEnter(event)">
   </div>
@@ -55,10 +55,10 @@
       if (event.keyCode === 13) {
         var answer = document.querySelector('.answer-input').value.toLowerCase();
         
-        if (answer === 'bonelich von skeleski') {
-          window.location.href = 'proxima_fase.html';
+        if (answer === 'ruto') {
+          window.location.href = 'fase3.html';
         } else {
-          window.location.href = 'pagina_de_erro.html';
+          window.location.href = 'error.html';
         }
       }
     }
