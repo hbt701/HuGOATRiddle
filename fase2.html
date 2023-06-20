@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HuGOAT Riddle</title>
+  <style>
+    body {
+      background-color: black;
+      background-image:
+        linear-gradient(#363636 50px, transparent 50px),
+        linear-gradient(90deg, #363636 50px, transparent 50px);
+      background-size: 500px 500px;
+      background-position: center center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 50%;
+    }
+
+    .answer-input {
+      width: 300px;
+      height: 20px;
+      font-size: 16px;
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-container">
+    <div class="image-container">
+      <img src="https://i.imgur.com/QrmDkqN.jpeg" alt="Dica do jogo">
+    </div>
+    <input class="answer-input" type="text" placeholder="Digite sua resposta" onkeypress="checkEnter(event)">
+  </div>
+
+  <script>
+    function checkEnter(event) {
+      if (event.keyCode === 13) {
+        var answer = document.querySelector('.answer-input').value.toLowerCase();
+        
+        if (answer === 'bonelich von skeleski') {
+          window.location.href = 'proxima_fase.html';
+        } else {
+          window.location.href = 'pagina_de_erro.html';
+        }
+      }
+    }
+  </script>
+</body>
+</html>
